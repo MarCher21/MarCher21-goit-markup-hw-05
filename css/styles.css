@@ -196,10 +196,15 @@ color: var(--second-text-color);
 }
 
 section{
-    padding: 94px;
+    padding: 94px 0;
 }
 
 /* section quality */
+
+.quality{
+    padding-bottom: 0;
+}
+
 .quality-list{
     display: flex;
     gap: 30px;
