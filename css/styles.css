@@ -53,7 +53,6 @@ body{
 .link{
     position: relative;
     text-decoration: none;
-    padding-bottom: 28px;
 }
 
 img {
@@ -74,6 +73,7 @@ font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
 color: var(--logo-studio-color);
+padding: 24px 0;
 }
 
 .nav-item.link.current {
@@ -102,6 +102,7 @@ color: var(--logo-studio-color);
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+    padding: 32px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -119,6 +120,7 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 display: flex;
 align-items: center;
+padding: 32px 0;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -137,7 +139,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header{
-    padding: 24px 0;
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -503,6 +504,7 @@ max-width: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .social-icons{
@@ -511,20 +513,20 @@ max-width: 370px;
     justify-content: center;
     width: 44px;
     height: 44px;
-    fill: var(--social-color);
+    color: var(--social-color);
+    border-radius: 50%;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.network-items{
-    color: var(--main-bg-color);
+.network{
+    fill: currentColor;
 }
 
 .social-icons:hover,
 .social-icons:focus{
     color: var(--main-bg-color);
     background-color: var(--hover-color);
-    border-radius: 100px;
 }
 
 .social-icons:hover .network,
@@ -563,11 +565,11 @@ max-width: 370px;
     justify-content: center;
     width: 44px;
     height: 44px;
-    fill: var(--main-bg-color);
+    color: var(--main-bg-color);
     background-color: rgba(255, 255, 255, 0.1);
     background-size: 100%;
     border-radius: 50px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon:hover,
@@ -591,33 +593,34 @@ max-width: 370px;
     display: flex;
 }
 
-.partner-item{
-    
-}
 
 .partner-link{
-    fill: var(--social-color);
+    color: #AFB1B8;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 170px;
     height: 92px;
-    justify-content: center;
-    align-items: center;
     border: 1px solid var(--social-color);
     border-radius: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 5000ms cubic-bezier(0.4, 0, 0.2, 1), border-color 5000ms cubic-bezier(0.4, 0, 0.2, 1);
     
+}
+.partner-icon{
+    fill: currentColor;
 }
 
 .partner-link:hover,
 .partner-link:focus {
     border-color: var(--hover-color);
+    color: var(--hover-color);
 }
 
-.partner-link:hover .partner-icon{
-    fill: var(--hover-color);
-}
+/* .partner-link:hover .partner-icon,
+.partner-link:focus .partner-icon
+{
+    fill: var(--hover-color)
+} */
 
 
 .project-link{
@@ -646,17 +649,19 @@ font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
-line-height: 1,14;
+line-height: 1.14;
 text-align: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
  
-padding: 27px 0;
 
 color: var(--main-bg-color);
 background-color: var(--services-bg-color);
 width: 370px;
 height: 70px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .portfolio-box{
@@ -675,12 +680,12 @@ height: 70px;
     background-color: var(--cards-color-hover);
     padding: 63px 24px;
     height: 100%;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: auto;
 }
 
-.portfolio-box:hover .portfolio-text{
+.project-link:hover .portfolio-text{
     transform: translateY(0);
 }
 
@@ -691,7 +696,11 @@ height: 70px;
     width: 100%;
     height: 100%;
     background-color: var(--backdrop-color);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.backdrop.is-hidden .modal
 
 .modal{
     position: absolute;
