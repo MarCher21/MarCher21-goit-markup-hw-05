@@ -1,0 +1,48 @@
+.services__title{
+        font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+   .services-container{
+        text-align: center;
+    }
+     
+    .services-list{
+        display: flex;
+        gap: 30px;
+     }
+
+     .services-box{
+        position: relative;
+
+    &__text{
+        position:absolute;
+        bottom: 0;
+        right: 0;
+        
+        
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+            
+        
+        color: var(--main-bg-color);
+        background-color: var(--services-bg-color);
+        width: 370px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    }
+    
+    
+    
