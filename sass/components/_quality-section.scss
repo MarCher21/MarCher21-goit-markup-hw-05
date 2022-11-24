@@ -1,32 +1,73 @@
 .quality-section{
-    padding-bottom: 0;
+    padding: 60px 0;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
 }
 
 .quality{
-    display: flex;
+
     gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    @include tablet {
+    }
+
+
+    &__item:not(last-child) {
+        width: 100%;
+        @include tablet {
+          width: calc((100% - 30px) / 2);
+        }
+        @include desktop {
+          display: flex;
+          flex-direction: column;
+          width: calc((100% - 3 * 30px) / 4);
+        }
+      }
     &__tittle{
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
         margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    @include tablet {
+      text-align: left;
+    }
         }
     &__text{
         font-size: 14px;
-         line-height: 24px;
-         letter-spacing: 0.03em;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
         color: var(--p-color);
+        @media screen and (min-width: 480px) {
+            width: 450px;
+          }
+        @include tablet {
+            width: 354px;
+          }
+        @include desktop {
+            width: 270px;
+          }
          }
     
     &__icon{
-    display: flex;
-    height: 120px;
+        display: flex;
+        height: 120px;
+        justify-content: center;
+        align-items: center;
     background-color: var(--third-bg-color);
+    border-radius: 4px;
     margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 270px;
+    }
 }
     
 

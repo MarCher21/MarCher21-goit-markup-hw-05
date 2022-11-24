@@ -8,6 +8,18 @@
     justify-content: space-between;
     align-items: center;
 
+
+    &__burger-menu{
+        border: none;
+        background-color: var(--main-bg-color);
+
+        display: flex;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
 }
 
 .header-nav{
@@ -34,9 +46,14 @@
 
 
 .site-nav {
-    display: flex;
-    gap: 50px;
+    display: none;
+
+    @include tablet{
+        display:flex;
+        gap: 50px;
     align-items: center;
+    }
+    
 
     &__link {
         font-weight: 500;
@@ -54,6 +71,7 @@
         &.link.current{
             color: var(--hover-color);}
     }
+
 
 }
     
@@ -75,27 +93,43 @@
 
 }
 
+
 .auth-nav{
-    display: flex;
-    gap: 50px;
+    
+    display: none;
+
+    @include tablet{
+        display:block;
+        margin-bottom: 10px;
+        margin-left: auto;
+    }
+
+    @include desktop{
+        display: flex;
+        gap: 50px;
     align-items: center;
+    }
+
 
     &__link{
         color: var(--p-color);
         font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    display: flex;
     align-items: center;
-    padding: 32px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus{
         color: var(--hover-color);
     }
+
+    @include desktop{
+        padding: 32px 0;
+        font-size: 14px;
     }
+   }
 
     &__icon {
         fill: currentColor;
@@ -104,7 +138,8 @@
     }
 
 
-
 }
+
+
 
 
