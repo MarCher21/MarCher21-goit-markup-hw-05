@@ -62,12 +62,97 @@
           </li>
         </ul>
 
-        <button class="header-cont__burger-menu js-open-menu">
+        <!-- <button class="header-cont__burger-menu" js-open-menu>
+          <svg width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button> -->
+
+        <button type="button" class="menu-open-button" data-menu-open>
           <svg width="40" height="40">
             <use href="./images/symbol-defs.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
+
+      <div class="mobile-menu" data-menu>
+      <div class="container">
+        <button type="button" class="mobile-menu__close-button" data-menu-close="">
+          <svg width="19px" height="19px">
+            <use href="./images/symbol-defs.svg#icon-vector"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+          <ul class="list">
+            <li class="mobile-menu__item">
+              <a
+                class="mobile-menu__link link mobile-menu__current"
+                href="./index.html"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="./portfolio.html"
+                >Порфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mobile-contacts list">
+          <li class="mobile-contacts__item">
+            <a
+              class="mobile-contacts__link-tel link mobile-menu__current"
+              href="tel:+380961111111"
+            >
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contacts__item">
+            <a
+              class="mobile-contacts__link-mail link"
+              href="mailto:info@devstudio.com"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-social list">
+          <li class="mobile-social__item">
+            <a
+              href="https://www.instagram.com/"
+              class="mobile-social__link link"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-social__item">
+            <a href="https://twitter.com/" class="mobile-social__link link">
+              Twitter
+            </a>
+          </li>
+          <li class="mobile-social__item">
+            <a
+              href="https://www.facebook.com/"
+              class="mobile-social__link link"
+            >
+              Facebook
+            </a>
+          </li>
+          <li class="mobile-social__item">
+            <a
+              href="https://www.linkedin.com/"
+              class="mobile-social__link link"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     </header>
     <main>
       <section class="hero hero-bg section">
@@ -139,18 +224,13 @@
           <ul class="services-list list">
             <li class="services-list__item">
               <div class="services-box">
-                <picture>
-                  <source 
-                  srcset="./images/programming.jpg 1x, 
-                  ./images/programming_desktop2x.jpg 2x"
-                  />
+                <picture><source srcset="./images/programming.jpg 1x, ./images/programming_desktop2x.jpg 2x"/>
                 <img
                   src="./images/coding.jpg"
                   width="370"
                   alt="програмування"
-                />
-                <p class="services-box__text">десктопні додатки</p>
-              </div>
+                /></picture>
+               <p class="services-box__text">десктопні додатки</p></div>
             </li>
             <li class="services-list__item">
               <div class="services-box">
@@ -164,7 +244,7 @@
                   src="./images/prototype.jpg"
                   width="370"
                   alt="розробка макету"
-                />
+                /></picture>
                 <p class="services-box__text">мобільні додатки</p>
               </div>
             </li>
@@ -175,7 +255,7 @@
                   srcset="./images/color_matching.jpg 1x,
                    ./images/color_matching_desktop2x.jpg 2x"
                    />
-                <img src="./images/color.type.jpg" width="370" alt="дизайн" />
+                <img src="./images/color.type.jpg" width="370" alt="дизайн" /></picture>
                 <p class="services-box__text">дизайнерські рішення</p>
               </div>
             </li>
@@ -561,18 +641,18 @@
             <ul class="contact list">
               <li class="contact__address">
                 <a
-                  class="link"
+                  class="contact__link link"
                   href="https://www.google.de/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4265841,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
               <li class="contact__item">
-                <a class="link" href="mailto:info@devstudio.com"
+                <a class="contact__email link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
               <li class="contact__item">
-                <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a class="contact__email link" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -635,9 +715,9 @@
       </div>
 
     </footer>
-    <div class="mobile-menu js-menu-container">
+    <!-- <div class="mobile-menu" js-menu-container>
       <div class="container">
-        <button class="mobile-menu__close-button js-close-menu">
+        <button class="mobile-menu__close-button" js-close-menu>
           <svg width="19px" height="19px">
             <use href="./images/symbol-defs.svg#icon-vector"></use>
           </svg>
@@ -712,7 +792,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -764,6 +844,7 @@
               placeholder="Введіть текст"
             ></textarea>
           </label>
+          
 
           <label class="checkbox-label">
             <input

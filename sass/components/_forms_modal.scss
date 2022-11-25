@@ -1,5 +1,6 @@
 .form{
-    width: 448px;
+    // width: 528px;
+    
     &__field{
         position: relative;
         display: flex;
@@ -39,6 +40,7 @@
     }
 
     &__comment{
+        margin-top: 4px;
         width: 100%;
         padding: 12px;
         border: 1px solid rgba(33, 33, 33, 0.2);
@@ -50,6 +52,7 @@
     &:focus{
         border-color: var(--hover-color);
     }
+   
     }
 
     &__button{
@@ -68,8 +71,8 @@
         cursor: pointer;
         align-items: center;
         text-align: center;
-        display: inline-block;
-        margin: 0 115px;
+        display: block;
+        margin: 0 auto;
         transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus{
@@ -105,17 +108,17 @@ label{
 }
 
 .checkbox-label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--p-color);
-    text-align: center;
-    margin-bottom: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--p-color);
+text-align: center;
+margin-bottom: 30px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
+font-size: 12px;
+line-height: 1.16;
 letter-spacing: 0.03em;
 
 }
