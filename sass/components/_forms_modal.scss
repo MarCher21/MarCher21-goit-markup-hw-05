@@ -52,6 +52,13 @@
     &:focus{
         border-color: var(--hover-color);
     }
+    font-size: 14px;
+    line-height: 1.14;
+
+    @include desktop{
+        font-size: 12px;
+        line-height: 1.16;
+    }
    
     }
 
@@ -120,6 +127,11 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.03em;
+
+    @include desktop{
+        font-size: 14px;
+        line-height: 1.71;
+    }
 
 }
 
